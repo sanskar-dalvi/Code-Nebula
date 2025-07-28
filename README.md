@@ -24,18 +24,18 @@ Git	Latest	To download the project
 🛠️ __Setup Guide__
 
 1. Clone the Project
-  #Repo cloning link
+//Repo cloning link
 
 2. Install Python Packages
   pip install -r requirements.txt
-  #can change as per project development 
+   //can change as per project development 
 
 3. Start Neo4j (using Docker - easiest way)
-  # Section will be filled after Docker setup
+  //Section will be filled after Docker setup
 
 4. Install Ollama & the AI Model
-  # Install Ollama
-  #after ollama setup
+   //Install Ollama
+   //after ollama setup
   # Start the Ollama server
   # Download the model
 
