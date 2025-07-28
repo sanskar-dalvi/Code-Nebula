@@ -78,30 +78,41 @@ Visit the docs:
 
 📊 **Output Examples**
 
-📁 AST JSON (structure of code)
-
+### AST JSON (staging/ast/)
+```json
 [
   {
     "type": "Class",
     "name": "CustomerController",
+    "startLine": 3,
+    "modifiers": ["public"],
     "body": [
       {
         "type": "Method",
         "name": "GetCustomers",
-        "returnType": "IActionResult"
+        "startLine": 5,
+        "returnType": "IActionResult",
+        "parameters": []
       }
     ]
   }
 ]
-
+```
 💡 AI Enriched JSON
 
-[...]
+```json
 {
+  "ast": [...],
   "summary": "Customer management API controller",
-  "dependencies": ["CustomerService"],
-  "tags": ["api", "controller"]
+  "dependencies": ["CustomerService", "IActionResult"],
+  "tags": ["controller", "api", "web"],
+  "processing_info": {
+    "classes_processed": 1,
+    "methods_processed": 3,
+    "strategy": "chunked"
+  }
 }
+```
 
 
 ---
