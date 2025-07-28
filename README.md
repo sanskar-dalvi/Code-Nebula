@@ -36,8 +36,8 @@ Git	Latest	To download the project
 4. Install Ollama & the AI Model
    //Install Ollama
    //after ollama setup
-  # Start the Ollama server
-  # Download the model
+   //Start the Ollama server
+   //Download the model
 
 5. Configure Your Environment
   Copy the config file and update values if needed:
@@ -48,7 +48,7 @@ Git	Latest	To download the project
 🧪 __Try It Out__
 
 🌐 Option A: CLI (Command Line)
-  #after cli implementation 
+  //after cli implementation 
 
 ---
 
@@ -57,7 +57,7 @@ Git	Latest	To download the project
     #after api integration 
 
 Visit the docs:
-👉 #docs folder
+👉 //docs folder
 
 
 
@@ -120,7 +120,7 @@ RETURN c.name, c.summary
 ---
 
 🧪 **Run Tests**
-#to be updated
+//to be updated
 
 
 ---
@@ -128,7 +128,7 @@ RETURN c.name, c.summary
 🔍 **Troubleshooting**
 
 Problem	Fix
-#to be updated
+//to be updated
 
 
 ---
