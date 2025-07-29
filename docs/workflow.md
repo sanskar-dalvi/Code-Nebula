@@ -46,26 +46,25 @@ graph TD
 ### 1.2 Enhanced Chunked Enrichment Flow
 
 ```text
-1. [C# Code File] (.cs file from input_code/)
+1. [C# Code File] (from input_code/)
     ⬇
-2. [ANTLR Parser] (cs_parser.parse_cs_file)
+2. [ANTLR Parser] 
     ➤ Uses C# grammar to generate an Abstract Syntax Tree (AST)
     ➤ Identifies classes, methods, properties, etc.
     ➤ Outputs list of nodes with type, name, and line number
     ⬇
-3. [JSON Serialization] (cs_parser.serialize_to_json)
+3. [JSON Serialization] 
     ➤ Serialize AST nodes into a clean JSON structure 
     ➤ Writes to parsed_output/file_ast.json
     ⬇
-4. [Chunked LLM Enrichment] (enrich.enrich_ast)
+4. [Chunked LLM Enrichment] 
     ➤ Extracts class and method chunks from AST
     ➤ Processes classes separately for class-level metadata
     ➤ Processes methods individually for method-level insights
     ➤ Uses local Ollama API (deepseek-coder:1.3b) for security
     ➤ Combines original AST with structured enrichments
-    ➤ Writes to enriched_output/file_enriched.json
     ⬇
-5. [Neo4j Insertion] (insert_graph.ingest_enriched_json)
+5. [Neo4j Insertion]
     ➤ Maps enriched JSON to graph schema defined in models.py
     ➤ Creates CodeEntity nodes for classes, methods, etc.
     ➤ Establishes relationships: CONTAINS, DEPENDS_ON
