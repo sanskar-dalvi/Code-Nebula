@@ -63,6 +63,7 @@ Git	Latest	To download the project
 
 Visit the docs:
 👉 //docs folder
+- **[Architecture Guide](docs/workflow.md)** - Detailed system design
 
 
 
