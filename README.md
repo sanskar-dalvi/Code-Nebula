@@ -11,7 +11,7 @@ Use AI (locally) to summarize and explain your code
 Store all this in a visual graph database: Neo4j
 
 
-🚀 **What You’ll Need**
+### 🚀 **What You’ll Need**
 
 Before you start, make sure you have these installed:
 
@@ -21,7 +21,7 @@ Ollama + DeepSeek Coder	Model : deepseek-coder:1.3b
 Git	Latest	To download the project
 
 
-🛠️ __Setup Guide__
+### 🛠️ __Setup Guide__
 
 1. Clone the Project
  ```bash
