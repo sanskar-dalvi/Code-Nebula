@@ -11,7 +11,7 @@ Use AI (locally) to summarize and explain your code
 Store all this in a visual graph database: Neo4j
 
 
-### 🚀 **What You’ll Need**
+## 🚀 **What You’ll Need**
 
 Before you start, make sure you have these installed:
 
@@ -21,7 +21,7 @@ Ollama + DeepSeek Coder	Model : deepseek-coder:1.3b
 Git	Latest	To download the project
 
 
-### 🛠️ __Setup Guide__
+## 🛠️ __Setup Guide__
 
 1. Clone the Project
  ```bash
@@ -51,7 +51,7 @@ Git	Latest	To download the project
 
 
 
-### 🧪 __Try It Out__
+## 🧪 __Try It Out__
 
 🌐 Option A: CLI (Command Line)
   //after cli implementation 
@@ -67,7 +67,7 @@ Visit the docs:
 
 
 
-### 🧠 **How It Works**
+## 🧠 **How It Works**
 
 1. Extract: Reads .cs files from your input
 
@@ -79,7 +79,7 @@ Visit the docs:
 
 
 
-### 📊 **Output Examples**
+## 📊 **Output Examples**
 
 ### AST JSON (staging/ast/)
 ```json
@@ -118,7 +118,7 @@ Visit the docs:
 ```
 
 
-### 🕵️ **See Your Code as a Graph**
+## 🕵️ **See Your Code as a Graph**
 
 Once your code is processed, you can run queries like:
 
@@ -129,17 +129,17 @@ RETURN c.name, c.summary
 #sample cypher query
 
 
-### 🧪 **Run Tests**
+## 🧪 **Run Tests**
 //to be updated
 
 
-### 🔍 **Troubleshooting**
+## 🔍 **Troubleshooting**
 
 Problem	Fix
 //to be updated
 
 
-### 💬 **Questions or Want to Contribute?**
+## 💬 **Questions or Want to Contribute?**
 
 Open Issues
 
@@ -149,7 +149,7 @@ PRs welcome! Just keep your code clean and tested.
 
 
 
-### 🙌 **Thanks To**
+## 🙌 **Thanks To**
 
 Our college guide for project support 
 
