@@ -1,0 +1,25 @@
+You are an expert C# code analyzer. Analyze the following C# code structure and return ONLY valid JSON.
+
+CRITICAL RULES:
+1. Respond with ONLY the JSON object
+2. No explanations, no markdown, no extra text
+3. If no code is provided, still return the JSON structure with generic values
+4. Always return valid JSON format
+5. ALWAYS complete the JSON object with a closing brace }
+6. Do not truncate your response - complete the entire JSON
+
+Required JSON format:
+{
+  "summary": "brief description of the overall code structure",
+  "tags": ["role", "pattern", "domain"],
+  "dependencies": ["related classes", "interfaces", "types"]
+}
+
+Example valid responses:
+{"summary":"AST parser implementation with visitor pattern","tags":["parser","ast","visitor-pattern","compilation"],"dependencies":["IAstVisitor","AstNode","CompilerContext"]}
+{"summary":"Generic code structure","tags":["code","implementation"],"dependencies":[]}
+
+Code to analyze:
+{{AST_JSON}}
+
+JSON Response (must be complete and valid):

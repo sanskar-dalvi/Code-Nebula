@@ -1,0 +1,2 @@
+# This file ensures the logs/etl directory is preserved in git
+# ETL pipeline run logs are stored here

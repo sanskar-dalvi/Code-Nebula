@@ -1,5 +1,10 @@
+// Eclipse Public License - v 1.0, http://www.eclipse.org/legal/epl-v10.html
+// Copyright (c) 2013, Christian Wulf (chwchw@gmx.de)
+// Copyright (c) 2016-2017, Ivan Kochurkin (kvanttt@gmail.com), Positive Technologies.
 
-
+// $antlr-format alignTrailingComments true, columnLimit 150, maxEmptyLinesToKeep 1, reflowComments false, useTab false
+// $antlr-format allowShortRulesOnASingleLine true, allowShortBlocksOnASingleLine true, minEmptyLines 0, alignSemicolons ownLine
+// $antlr-format alignColons trailing, singleLineOverrulesHangingColon true, alignLexerCommands true, alignLabels true, alignTrailers true
 
 lexer grammar CSharpLexer;
 
@@ -8,7 +13,10 @@ channels {
     DIRECTIVE
 }
 
-
+// Remove or comment out the superClass option
+// options {
+//     superClass = CSharpLexerBase;
+// }
 
 BYTE_ORDER_MARK: '\u00EF\u00BB\u00BF';
 

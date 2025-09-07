@@ -1,0 +1,2 @@
+# This file ensures the logs/llm_raw directory is preserved in git
+# Raw LLM response logs are stored here

@@ -1,0 +1,2 @@
+# This file ensures the archive directory is preserved in git
+# Archive files from ETL pipeline runs are stored here
