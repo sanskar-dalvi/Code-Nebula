@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from pipeline.enrich import enrich_ast
 from pipeline.insert_graph import insert_enriched_graph
 print("CLI script started")
