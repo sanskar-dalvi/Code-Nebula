@@ -1,4 +1,3 @@
-# CSharpLexerBase.py
 from antlr4 import Lexer
 
 class CSharpLexerBase(Lexer):
@@ -39,8 +38,10 @@ class CSharpLexerBase(Lexer):
     def IsVerbatiumString(self):
         return self.verbatium
 
+    def IsRegularCharInside(self):
+        return self.interpolatedStringLevel > 0
+
     def PopMode(self):
         super().popMode()
         if self._modeStack:
             self.verbatium = self.interpolatedVerbatiums[-1]
-
