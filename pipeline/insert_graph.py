@@ -29,16 +29,28 @@ def ingest_enriched_json(curated_path: str):
     """
     logger.info(f"Starting ingestion of enriched JSON: {curated_path}")
     curated_path = Path(curated_path)
-    if not curated_path.exists() or not curated_path.is_dir():
-        logger.error(f"Invalid curated path: {curated_path}")
-        return
-    json_files = list(curated_path.glob("*.json"))
-    if not json_files:
-        logger.warning(f"No JSON files found in curated directory: {curated_path}")
+
+    if not curated_path.exists():
+        logger.error(f"Path does not exist: {curated_path}")
         return
 
-    for json_file in json_files:
-        _process_single_file(json_file)
+    # If a file is passed, process just that file
+    if curated_path.is_file() and curated_path.suffix == ".json":
+        _process_single_file(curated_path)
+        return
+
+    # If a directory is passed, process all JSON files inside
+    if curated_path.is_dir():
+        json_files = list(curated_path.glob("*.json"))
+        if not json_files:
+            logger.warning(f"No JSON files found in curated directory: {curated_path}")
+            return
+        for json_file in json_files:
+            _process_single_file(json_file)
+        return
+
+    logger.error(f"Invalid curated path: {curated_path}")
+
 
 def _process_single_file(file_path: Path):
     """
