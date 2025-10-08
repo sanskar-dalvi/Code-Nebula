@@ -21,8 +21,7 @@ A comprehensive pipeline that extracts semantic relationships from legacy **C# (
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/darshan-e-zest/csharp-parser-creation.git
-   cd csharp-parser-creation
+   
    ```
 
 2. **Install Python dependencies**
