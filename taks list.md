@@ -8,7 +8,7 @@ To build an automated pipeline that can parse C# source code, use an AI model to
 
 | Name                | Role                          | Primary Responsibilities                                   |
 | ------------------- | ----------------------------- | ---------------------------------------------------------- |
-| **Sanskar Dalvi**   | Owner / AI & DB Lead          | All AI/LLM integration, Neo4j schema, and data ingestion.  |
+| **Sanskar Dalvi**   |  AI & DB Lead          | All AI/LLM integration, Neo4j schema, and data ingestion.  |
 | **Kshitij Landge**  | Infrastructure & Setup Lead   | Initial project setup, dependencies, and file handling.    |
 | **Ganesh Muthal**   | Parsing Lead                  | All C# source code parsing logic using ANTLR.              |
 | **Utkarsha Mahale** | API Lead                      | Development and testing of all FastAPI endpoints.          |
