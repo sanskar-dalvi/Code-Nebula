@@ -438,7 +438,7 @@ def run_etl_pipeline(input_path: Optional[str] = None,
 def main():
     """CLI entry point for ETL pipeline"""
     parser = argparse.ArgumentParser(
-        description="Run the complete C# ETL pipeline: Extract → Parse → Enrich → Load → Archive"
+        description="Run the complete C# ETL pipeline: Extract -> Parse -> Enrich -> Load -> Archive"
     )
     parser.add_argument(
         "input", nargs="?", default=None,

@@ -36,4 +36,15 @@ java -Xmx500M -jar %ANTLR_JAR% ^
     -o %OUTPUT_DIR% ^
     %GRAMMAR_DIR%\CSharpLexer.g4 %GRAMMAR_DIR%\CSharpParser.g4
 
+echo 📋 Copying base classes to output directory...
+copy /Y %GRAMMAR_DIR%\CSharpLexerBase.py %OUTPUT_DIR%\CSharpLexerBase.py
+copy /Y %GRAMMAR_DIR%\CSharpParserBase.py %OUTPUT_DIR%\CSharpParserBase.py
+
+echo 📄 Creating __init__.py files...
+echo """Generated parsers package""" > %OUTPUT_DIR%\..\__init__.py
+echo """Generated C# parser and lexer modules""" > %OUTPUT_DIR%\__init__.py
+
+echo 🔧 Fixing generated Python code (this -^> self)...
+python %SCRIPT_DIR%fix_generated_python.py %OUTPUT_DIR%
+
 echo ✅ Parser generated at %OUTPUT_DIR%

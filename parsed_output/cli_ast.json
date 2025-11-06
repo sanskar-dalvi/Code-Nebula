@@ -1,0 +1,1583 @@
+[
+  {
+    "type": "Namespace",
+    "name": "MaterialSkin",
+    "startLine": 5,
+    "body": [
+      {
+        "type": "Class",
+        "name": "ColorScheme",
+        "startLine": 7,
+        "modifiers": [
+          "public"
+        ],
+        "body": [
+          {
+            "type": "Field",
+            "name": "PrimaryColor",
+            "fieldType": "Color",
+            "startLine": 9,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "DarkPrimaryColor",
+            "fieldType": "Color",
+            "startLine": 9,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "LightPrimaryColor",
+            "fieldType": "Color",
+            "startLine": 9,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "AccentColor",
+            "fieldType": "Color",
+            "startLine": 9,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "TextColor",
+            "fieldType": "Color",
+            "startLine": 9,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "PrimaryPen",
+            "fieldType": "Pen",
+            "startLine": 10,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "DarkPrimaryPen",
+            "fieldType": "Pen",
+            "startLine": 10,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "LightPrimaryPen",
+            "fieldType": "Pen",
+            "startLine": 10,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "AccentPen",
+            "fieldType": "Pen",
+            "startLine": 10,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "TextPen",
+            "fieldType": "Pen",
+            "startLine": 10,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "PrimaryBrush",
+            "fieldType": "Brush",
+            "startLine": 11,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "DarkPrimaryBrush",
+            "fieldType": "Brush",
+            "startLine": 11,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "LightPrimaryBrush",
+            "fieldType": "Brush",
+            "startLine": 11,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "AccentBrush",
+            "fieldType": "Brush",
+            "startLine": 11,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Field",
+            "name": "TextBrush",
+            "fieldType": "Brush",
+            "startLine": 11,
+            "modifiers": [
+              "public",
+              "readonly"
+            ],
+            "isReadOnly": true
+          },
+          {
+            "type": "Constructor",
+            "name": "ColorScheme",
+            "startLine": 21,
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "type": "Primary",
+                "name": "primary"
+              },
+              {
+                "type": "Primary",
+                "name": "darkPrimary"
+              },
+              {
+                "type": "Primary",
+                "name": "lightPrimary"
+              },
+              {
+                "type": "Accent",
+                "name": "accent"
+              },
+              {
+                "type": "TextShade",
+                "name": "textShade"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Class",
+        "name": "ColorExtension",
+        "startLine": 46,
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "body": [
+          {
+            "type": "Method",
+            "name": "ToColor",
+            "startLine": 52,
+            "returnType": "Color",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "type": "int",
+                "name": "argb"
+              }
+            ]
+          },
+          {
+            "type": "Method",
+            "name": "RemoveAlpha",
+            "startLine": 65,
+            "returnType": "Color",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "type": "Color",
+                "name": "color"
+              }
+            ]
+          },
+          {
+            "type": "Method",
+            "name": "PercentageToColorComponent",
+            "startLine": 75,
+            "returnType": "int",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "type": "int",
+                "name": "percentage"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Enum",
+        "name": "TextShade",
+        "startLine": 82,
+        "modifiers": [
+          "public"
+        ],
+        "members": [
+          {
+            "name": "WHITE",
+            "startLine": 84,
+            "value": "0xFFFFFF"
+          },
+          {
+            "name": "BLACK",
+            "startLine": 85,
+            "value": "0x212121"
+          }
+        ]
+      },
+      {
+        "type": "Enum",
+        "name": "Primary",
+        "startLine": 88,
+        "modifiers": [
+          "public"
+        ],
+        "members": [
+          {
+            "name": "Red50",
+            "startLine": 90,
+            "value": "0xFFEBEE"
+          },
+          {
+            "name": "Red100",
+            "startLine": 91,
+            "value": "0xFFCDD2"
+          },
+          {
+            "name": "Red200",
+            "startLine": 92,
+            "value": "0xEF9A9A"
+          },
+          {
+            "name": "Red300",
+            "startLine": 93,
+            "value": "0xE57373"
+          },
+          {
+            "name": "Red400",
+            "startLine": 94,
+            "value": "0xEF5350"
+          },
+          {
+            "name": "Red500",
+            "startLine": 95,
+            "value": "0xF44336"
+          },
+          {
+            "name": "Red600",
+            "startLine": 96,
+            "value": "0xE53935"
+          },
+          {
+            "name": "Red700",
+            "startLine": 97,
+            "value": "0xD32F2F"
+          },
+          {
+            "name": "Red800",
+            "startLine": 98,
+            "value": "0xC62828"
+          },
+          {
+            "name": "Red900",
+            "startLine": 99,
+            "value": "0xB71C1C"
+          },
+          {
+            "name": "Pink50",
+            "startLine": 100,
+            "value": "0xFCE4EC"
+          },
+          {
+            "name": "Pink100",
+            "startLine": 101,
+            "value": "0xF8BBD0"
+          },
+          {
+            "name": "Pink200",
+            "startLine": 102,
+            "value": "0xF48FB1"
+          },
+          {
+            "name": "Pink300",
+            "startLine": 103,
+            "value": "0xF06292"
+          },
+          {
+            "name": "Pink400",
+            "startLine": 104,
+            "value": "0xEC407A"
+          },
+          {
+            "name": "Pink500",
+            "startLine": 105,
+            "value": "0xE91E63"
+          },
+          {
+            "name": "Pink600",
+            "startLine": 106,
+            "value": "0xD81B60"
+          },
+          {
+            "name": "Pink700",
+            "startLine": 107,
+            "value": "0xC2185B"
+          },
+          {
+            "name": "Pink800",
+            "startLine": 108,
+            "value": "0xAD1457"
+          },
+          {
+            "name": "Pink900",
+            "startLine": 109,
+            "value": "0x880E4F"
+          },
+          {
+            "name": "Purple50",
+            "startLine": 110,
+            "value": "0xF3E5F5"
+          },
+          {
+            "name": "Purple100",
+            "startLine": 111,
+            "value": "0xE1BEE7"
+          },
+          {
+            "name": "Purple200",
+            "startLine": 112,
+            "value": "0xCE93D8"
+          },
+          {
+            "name": "Purple300",
+            "startLine": 113,
+            "value": "0xBA68C8"
+          },
+          {
+            "name": "Purple400",
+            "startLine": 114,
+            "value": "0xAB47BC"
+          },
+          {
+            "name": "Purple500",
+            "startLine": 115,
+            "value": "0x9C27B0"
+          },
+          {
+            "name": "Purple600",
+            "startLine": 116,
+            "value": "0x8E24AA"
+          },
+          {
+            "name": "Purple700",
+            "startLine": 117,
+            "value": "0x7B1FA2"
+          },
+          {
+            "name": "Purple800",
+            "startLine": 118,
+            "value": "0x6A1B9A"
+          },
+          {
+            "name": "Purple900",
+            "startLine": 119,
+            "value": "0x4A148C"
+          },
+          {
+            "name": "DeepPurple50",
+            "startLine": 120,
+            "value": "0xEDE7F6"
+          },
+          {
+            "name": "DeepPurple100",
+            "startLine": 121,
+            "value": "0xD1C4E9"
+          },
+          {
+            "name": "DeepPurple200",
+            "startLine": 122,
+            "value": "0xB39DDB"
+          },
+          {
+            "name": "DeepPurple300",
+            "startLine": 123,
+            "value": "0x9575CD"
+          },
+          {
+            "name": "DeepPurple400",
+            "startLine": 124,
+            "value": "0x7E57C2"
+          },
+          {
+            "name": "DeepPurple500",
+            "startLine": 125,
+            "value": "0x673AB7"
+          },
+          {
+            "name": "DeepPurple600",
+            "startLine": 126,
+            "value": "0x5E35B1"
+          },
+          {
+            "name": "DeepPurple700",
+            "startLine": 127,
+            "value": "0x512DA8"
+          },
+          {
+            "name": "DeepPurple800",
+            "startLine": 128,
+            "value": "0x4527A0"
+          },
+          {
+            "name": "DeepPurple900",
+            "startLine": 129,
+            "value": "0x311B92"
+          },
+          {
+            "name": "Indigo50",
+            "startLine": 130,
+            "value": "0xE8EAF6"
+          },
+          {
+            "name": "Indigo100",
+            "startLine": 131,
+            "value": "0xC5CAE9"
+          },
+          {
+            "name": "Indigo200",
+            "startLine": 132,
+            "value": "0x9FA8DA"
+          },
+          {
+            "name": "Indigo300",
+            "startLine": 133,
+            "value": "0x7986CB"
+          },
+          {
+            "name": "Indigo400",
+            "startLine": 134,
+            "value": "0x5C6BC0"
+          },
+          {
+            "name": "Indigo500",
+            "startLine": 135,
+            "value": "0x3F51B5"
+          },
+          {
+            "name": "Indigo600",
+            "startLine": 136,
+            "value": "0x3949AB"
+          },
+          {
+            "name": "Indigo700",
+            "startLine": 137,
+            "value": "0x303F9F"
+          },
+          {
+            "name": "Indigo800",
+            "startLine": 138,
+            "value": "0x283593"
+          },
+          {
+            "name": "Indigo900",
+            "startLine": 139,
+            "value": "0x1A237E"
+          },
+          {
+            "name": "Blue50",
+            "startLine": 140,
+            "value": "0xE3F2FD"
+          },
+          {
+            "name": "Blue100",
+            "startLine": 141,
+            "value": "0xBBDEFB"
+          },
+          {
+            "name": "Blue200",
+            "startLine": 142,
+            "value": "0x90CAF9"
+          },
+          {
+            "name": "Blue300",
+            "startLine": 143,
+            "value": "0x64B5F6"
+          },
+          {
+            "name": "Blue400",
+            "startLine": 144,
+            "value": "0x42A5F5"
+          },
+          {
+            "name": "Blue500",
+            "startLine": 145,
+            "value": "0x2196F3"
+          },
+          {
+            "name": "Blue600",
+            "startLine": 146,
+            "value": "0x1E88E5"
+          },
+          {
+            "name": "Blue700",
+            "startLine": 147,
+            "value": "0x1976D2"
+          },
+          {
+            "name": "Blue800",
+            "startLine": 148,
+            "value": "0x1565C0"
+          },
+          {
+            "name": "Blue900",
+            "startLine": 149,
+            "value": "0x0D47A1"
+          },
+          {
+            "name": "LightBlue50",
+            "startLine": 150,
+            "value": "0xE1F5FE"
+          },
+          {
+            "name": "LightBlue100",
+            "startLine": 151,
+            "value": "0xB3E5FC"
+          },
+          {
+            "name": "LightBlue200",
+            "startLine": 152,
+            "value": "0x81D4FA"
+          },
+          {
+            "name": "LightBlue300",
+            "startLine": 153,
+            "value": "0x4FC3F7"
+          },
+          {
+            "name": "LightBlue400",
+            "startLine": 154,
+            "value": "0x29B6F6"
+          },
+          {
+            "name": "LightBlue500",
+            "startLine": 155,
+            "value": "0x03A9F4"
+          },
+          {
+            "name": "LightBlue600",
+            "startLine": 156,
+            "value": "0x039BE5"
+          },
+          {
+            "name": "LightBlue700",
+            "startLine": 157,
+            "value": "0x0288D1"
+          },
+          {
+            "name": "LightBlue800",
+            "startLine": 158,
+            "value": "0x0277BD"
+          },
+          {
+            "name": "LightBlue900",
+            "startLine": 159,
+            "value": "0x01579B"
+          },
+          {
+            "name": "Cyan50",
+            "startLine": 160,
+            "value": "0xE0F7FA"
+          },
+          {
+            "name": "Cyan100",
+            "startLine": 161,
+            "value": "0xB2EBF2"
+          },
+          {
+            "name": "Cyan200",
+            "startLine": 162,
+            "value": "0x80DEEA"
+          },
+          {
+            "name": "Cyan300",
+            "startLine": 163,
+            "value": "0x4DD0E1"
+          },
+          {
+            "name": "Cyan400",
+            "startLine": 164,
+            "value": "0x26C6DA"
+          },
+          {
+            "name": "Cyan500",
+            "startLine": 165,
+            "value": "0x00BCD4"
+          },
+          {
+            "name": "Cyan600",
+            "startLine": 166,
+            "value": "0x00ACC1"
+          },
+          {
+            "name": "Cyan700",
+            "startLine": 167,
+            "value": "0x0097A7"
+          },
+          {
+            "name": "Cyan800",
+            "startLine": 168,
+            "value": "0x00838F"
+          },
+          {
+            "name": "Cyan900",
+            "startLine": 169,
+            "value": "0x006064"
+          },
+          {
+            "name": "Teal50",
+            "startLine": 170,
+            "value": "0xE0F2F1"
+          },
+          {
+            "name": "Teal100",
+            "startLine": 171,
+            "value": "0xB2DFDB"
+          },
+          {
+            "name": "Teal200",
+            "startLine": 172,
+            "value": "0x80CBC4"
+          },
+          {
+            "name": "Teal300",
+            "startLine": 173,
+            "value": "0x4DB6AC"
+          },
+          {
+            "name": "Teal400",
+            "startLine": 174,
+            "value": "0x26A69A"
+          },
+          {
+            "name": "Teal500",
+            "startLine": 175,
+            "value": "0x009688"
+          },
+          {
+            "name": "Teal600",
+            "startLine": 176,
+            "value": "0x00897B"
+          },
+          {
+            "name": "Teal700",
+            "startLine": 177,
+            "value": "0x00796B"
+          },
+          {
+            "name": "Teal800",
+            "startLine": 178,
+            "value": "0x00695C"
+          },
+          {
+            "name": "Teal900",
+            "startLine": 179,
+            "value": "0x004D40"
+          },
+          {
+            "name": "Green50",
+            "startLine": 180,
+            "value": "0xE8F5E9"
+          },
+          {
+            "name": "Green100",
+            "startLine": 181,
+            "value": "0xC8E6C9"
+          },
+          {
+            "name": "Green200",
+            "startLine": 182,
+            "value": "0xA5D6A7"
+          },
+          {
+            "name": "Green300",
+            "startLine": 183,
+            "value": "0x81C784"
+          },
+          {
+            "name": "Green400",
+            "startLine": 184,
+            "value": "0x66BB6A"
+          },
+          {
+            "name": "Green500",
+            "startLine": 185,
+            "value": "0x4CAF50"
+          },
+          {
+            "name": "Green600",
+            "startLine": 186,
+            "value": "0x43A047"
+          },
+          {
+            "name": "Green700",
+            "startLine": 187,
+            "value": "0x388E3C"
+          },
+          {
+            "name": "Green800",
+            "startLine": 188,
+            "value": "0x2E7D32"
+          },
+          {
+            "name": "Green900",
+            "startLine": 189,
+            "value": "0x1B5E20"
+          },
+          {
+            "name": "LightGreen50",
+            "startLine": 190,
+            "value": "0xF1F8E9"
+          },
+          {
+            "name": "LightGreen100",
+            "startLine": 191,
+            "value": "0xDCEDC8"
+          },
+          {
+            "name": "LightGreen200",
+            "startLine": 192,
+            "value": "0xC5E1A5"
+          },
+          {
+            "name": "LightGreen300",
+            "startLine": 193,
+            "value": "0xAED581"
+          },
+          {
+            "name": "LightGreen400",
+            "startLine": 194,
+            "value": "0x9CCC65"
+          },
+          {
+            "name": "LightGreen500",
+            "startLine": 195,
+            "value": "0x8BC34A"
+          },
+          {
+            "name": "LightGreen600",
+            "startLine": 196,
+            "value": "0x7CB342"
+          },
+          {
+            "name": "LightGreen700",
+            "startLine": 197,
+            "value": "0x689F38"
+          },
+          {
+            "name": "LightGreen800",
+            "startLine": 198,
+            "value": "0x558B2F"
+          },
+          {
+            "name": "LightGreen900",
+            "startLine": 199,
+            "value": "0x33691E"
+          },
+          {
+            "name": "Lime50",
+            "startLine": 200,
+            "value": "0xF9FBE7"
+          },
+          {
+            "name": "Lime100",
+            "startLine": 201,
+            "value": "0xF0F4C3"
+          },
+          {
+            "name": "Lime200",
+            "startLine": 202,
+            "value": "0xE6EE9C"
+          },
+          {
+            "name": "Lime300",
+            "startLine": 203,
+            "value": "0xDCE775"
+          },
+          {
+            "name": "Lime400",
+            "startLine": 204,
+            "value": "0xD4E157"
+          },
+          {
+            "name": "Lime500",
+            "startLine": 205,
+            "value": "0xCDDC39"
+          },
+          {
+            "name": "Lime600",
+            "startLine": 206,
+            "value": "0xC0CA33"
+          },
+          {
+            "name": "Lime700",
+            "startLine": 207,
+            "value": "0xAFB42B"
+          },
+          {
+            "name": "Lime800",
+            "startLine": 208,
+            "value": "0x9E9D24"
+          },
+          {
+            "name": "Lime900",
+            "startLine": 209,
+            "value": "0x827717"
+          },
+          {
+            "name": "Yellow50",
+            "startLine": 210,
+            "value": "0xFFFDE7"
+          },
+          {
+            "name": "Yellow100",
+            "startLine": 211,
+            "value": "0xFFF9C4"
+          },
+          {
+            "name": "Yellow200",
+            "startLine": 212,
+            "value": "0xFFF59D"
+          },
+          {
+            "name": "Yellow300",
+            "startLine": 213,
+            "value": "0xFFF176"
+          },
+          {
+            "name": "Yellow400",
+            "startLine": 214,
+            "value": "0xFFEE58"
+          },
+          {
+            "name": "Yellow500",
+            "startLine": 215,
+            "value": "0xFFEB3B"
+          },
+          {
+            "name": "Yellow600",
+            "startLine": 216,
+            "value": "0xFDD835"
+          },
+          {
+            "name": "Yellow700",
+            "startLine": 217,
+            "value": "0xFBC02D"
+          },
+          {
+            "name": "Yellow800",
+            "startLine": 218,
+            "value": "0xF9A825"
+          },
+          {
+            "name": "Yellow900",
+            "startLine": 219,
+            "value": "0xF57F17"
+          },
+          {
+            "name": "Amber50",
+            "startLine": 220,
+            "value": "0xFFF8E1"
+          },
+          {
+            "name": "Amber100",
+            "startLine": 221,
+            "value": "0xFFECB3"
+          },
+          {
+            "name": "Amber200",
+            "startLine": 222,
+            "value": "0xFFE082"
+          },
+          {
+            "name": "Amber300",
+            "startLine": 223,
+            "value": "0xFFD54F"
+          },
+          {
+            "name": "Amber400",
+            "startLine": 224,
+            "value": "0xFFCA28"
+          },
+          {
+            "name": "Amber500",
+            "startLine": 225,
+            "value": "0xFFC107"
+          },
+          {
+            "name": "Amber600",
+            "startLine": 226,
+            "value": "0xFFB300"
+          },
+          {
+            "name": "Amber700",
+            "startLine": 227,
+            "value": "0xFFA000"
+          },
+          {
+            "name": "Amber800",
+            "startLine": 228,
+            "value": "0xFF8F00"
+          },
+          {
+            "name": "Amber900",
+            "startLine": 229,
+            "value": "0xFF6F00"
+          },
+          {
+            "name": "Orange50",
+            "startLine": 230,
+            "value": "0xFFF3E0"
+          },
+          {
+            "name": "Orange100",
+            "startLine": 231,
+            "value": "0xFFE0B2"
+          },
+          {
+            "name": "Orange200",
+            "startLine": 232,
+            "value": "0xFFCC80"
+          },
+          {
+            "name": "Orange300",
+            "startLine": 233,
+            "value": "0xFFB74D"
+          },
+          {
+            "name": "Orange400",
+            "startLine": 234,
+            "value": "0xFFA726"
+          },
+          {
+            "name": "Orange500",
+            "startLine": 235,
+            "value": "0xFF9800"
+          },
+          {
+            "name": "Orange600",
+            "startLine": 236,
+            "value": "0xFB8C00"
+          },
+          {
+            "name": "Orange700",
+            "startLine": 237,
+            "value": "0xF57C00"
+          },
+          {
+            "name": "Orange800",
+            "startLine": 238,
+            "value": "0xEF6C00"
+          },
+          {
+            "name": "Orange900",
+            "startLine": 239,
+            "value": "0xE65100"
+          },
+          {
+            "name": "DeepOrange50",
+            "startLine": 240,
+            "value": "0xFBE9E7"
+          },
+          {
+            "name": "DeepOrange100",
+            "startLine": 241,
+            "value": "0xFFCCBC"
+          },
+          {
+            "name": "DeepOrange200",
+            "startLine": 242,
+            "value": "0xFFAB91"
+          },
+          {
+            "name": "DeepOrange300",
+            "startLine": 243,
+            "value": "0xFF8A65"
+          },
+          {
+            "name": "DeepOrange400",
+            "startLine": 244,
+            "value": "0xFF7043"
+          },
+          {
+            "name": "DeepOrange500",
+            "startLine": 245,
+            "value": "0xFF5722"
+          },
+          {
+            "name": "DeepOrange600",
+            "startLine": 246,
+            "value": "0xF4511E"
+          },
+          {
+            "name": "DeepOrange700",
+            "startLine": 247,
+            "value": "0xE64A19"
+          },
+          {
+            "name": "DeepOrange800",
+            "startLine": 248,
+            "value": "0xD84315"
+          },
+          {
+            "name": "DeepOrange900",
+            "startLine": 249,
+            "value": "0xBF360C"
+          },
+          {
+            "name": "Brown50",
+            "startLine": 250,
+            "value": "0xEFEBE9"
+          },
+          {
+            "name": "Brown100",
+            "startLine": 251,
+            "value": "0xD7CCC8"
+          },
+          {
+            "name": "Brown200",
+            "startLine": 252,
+            "value": "0xBCAAA4"
+          },
+          {
+            "name": "Brown300",
+            "startLine": 253,
+            "value": "0xA1887F"
+          },
+          {
+            "name": "Brown400",
+            "startLine": 254,
+            "value": "0x8D6E63"
+          },
+          {
+            "name": "Brown500",
+            "startLine": 255,
+            "value": "0x795548"
+          },
+          {
+            "name": "Brown600",
+            "startLine": 256,
+            "value": "0x6D4C41"
+          },
+          {
+            "name": "Brown700",
+            "startLine": 257,
+            "value": "0x5D4037"
+          },
+          {
+            "name": "Brown800",
+            "startLine": 258,
+            "value": "0x4E342E"
+          },
+          {
+            "name": "Brown900",
+            "startLine": 259,
+            "value": "0x3E2723"
+          },
+          {
+            "name": "Grey50",
+            "startLine": 260,
+            "value": "0xFAFAFA"
+          },
+          {
+            "name": "Grey100",
+            "startLine": 261,
+            "value": "0xF5F5F5"
+          },
+          {
+            "name": "Grey200",
+            "startLine": 262,
+            "value": "0xEEEEEE"
+          },
+          {
+            "name": "Grey300",
+            "startLine": 263,
+            "value": "0xE0E0E0"
+          },
+          {
+            "name": "Grey400",
+            "startLine": 264,
+            "value": "0xBDBDBD"
+          },
+          {
+            "name": "Grey500",
+            "startLine": 265,
+            "value": "0x9E9E9E"
+          },
+          {
+            "name": "Grey600",
+            "startLine": 266,
+            "value": "0x757575"
+          },
+          {
+            "name": "Grey700",
+            "startLine": 267,
+            "value": "0x616161"
+          },
+          {
+            "name": "Grey800",
+            "startLine": 268,
+            "value": "0x424242"
+          },
+          {
+            "name": "Grey900",
+            "startLine": 269,
+            "value": "0x212121"
+          },
+          {
+            "name": "BlueGrey50",
+            "startLine": 270,
+            "value": "0xECEFF1"
+          },
+          {
+            "name": "BlueGrey100",
+            "startLine": 271,
+            "value": "0xCFD8DC"
+          },
+          {
+            "name": "BlueGrey200",
+            "startLine": 272,
+            "value": "0xB0BEC5"
+          },
+          {
+            "name": "BlueGrey300",
+            "startLine": 273,
+            "value": "0x90A4AE"
+          },
+          {
+            "name": "BlueGrey400",
+            "startLine": 274,
+            "value": "0x78909C"
+          },
+          {
+            "name": "BlueGrey500",
+            "startLine": 275,
+            "value": "0x607D8B"
+          },
+          {
+            "name": "BlueGrey600",
+            "startLine": 276,
+            "value": "0x546E7A"
+          },
+          {
+            "name": "BlueGrey700",
+            "startLine": 277,
+            "value": "0x455A64"
+          },
+          {
+            "name": "BlueGrey800",
+            "startLine": 278,
+            "value": "0x37474F"
+          },
+          {
+            "name": "BlueGrey900",
+            "startLine": 279,
+            "value": "0x263238"
+          }
+        ]
+      },
+      {
+        "type": "Enum",
+        "name": "Accent",
+        "startLine": 283,
+        "modifiers": [
+          "public"
+        ],
+        "members": [
+          {
+            "name": "Red100",
+            "startLine": 285,
+            "value": "0xFF8A80"
+          },
+          {
+            "name": "Red200",
+            "startLine": 286,
+            "value": "0xFF5252"
+          },
+          {
+            "name": "Red400",
+            "startLine": 287,
+            "value": "0xFF1744"
+          },
+          {
+            "name": "Red700",
+            "startLine": 288,
+            "value": "0xD50000"
+          },
+          {
+            "name": "Pink100",
+            "startLine": 289,
+            "value": "0xFF80AB"
+          },
+          {
+            "name": "Pink200",
+            "startLine": 290,
+            "value": "0xFF4081"
+          },
+          {
+            "name": "Pink400",
+            "startLine": 291,
+            "value": "0xF50057"
+          },
+          {
+            "name": "Pink700",
+            "startLine": 292,
+            "value": "0xC51162"
+          },
+          {
+            "name": "Purple100",
+            "startLine": 293,
+            "value": "0xEA80FC"
+          },
+          {
+            "name": "Purple200",
+            "startLine": 294,
+            "value": "0xE040FB"
+          },
+          {
+            "name": "Purple400",
+            "startLine": 295,
+            "value": "0xD500F9"
+          },
+          {
+            "name": "Purple700",
+            "startLine": 296,
+            "value": "0xAA00FF"
+          },
+          {
+            "name": "DeepPurple100",
+            "startLine": 297,
+            "value": "0xB388FF"
+          },
+          {
+            "name": "DeepPurple200",
+            "startLine": 298,
+            "value": "0x7C4DFF"
+          },
+          {
+            "name": "DeepPurple400",
+            "startLine": 299,
+            "value": "0x651FFF"
+          },
+          {
+            "name": "DeepPurple700",
+            "startLine": 300,
+            "value": "0x6200EA"
+          },
+          {
+            "name": "Indigo100",
+            "startLine": 301,
+            "value": "0x8C9EFF"
+          },
+          {
+            "name": "Indigo200",
+            "startLine": 302,
+            "value": "0x536DFE"
+          },
+          {
+            "name": "Indigo400",
+            "startLine": 303,
+            "value": "0x3D5AFE"
+          },
+          {
+            "name": "Indigo700",
+            "startLine": 304,
+            "value": "0x304FFE"
+          },
+          {
+            "name": "Blue100",
+            "startLine": 305,
+            "value": "0x82B1FF"
+          },
+          {
+            "name": "Blue200",
+            "startLine": 306,
+            "value": "0x448AFF"
+          },
+          {
+            "name": "Blue400",
+            "startLine": 307,
+            "value": "0x2979FF"
+          },
+          {
+            "name": "Blue700",
+            "startLine": 308,
+            "value": "0x2962FF"
+          },
+          {
+            "name": "LightBlue100",
+            "startLine": 309,
+            "value": "0x80D8FF"
+          },
+          {
+            "name": "LightBlue200",
+            "startLine": 310,
+            "value": "0x40C4FF"
+          },
+          {
+            "name": "LightBlue400",
+            "startLine": 311,
+            "value": "0x00B0FF"
+          },
+          {
+            "name": "LightBlue700",
+            "startLine": 312,
+            "value": "0x0091EA"
+          },
+          {
+            "name": "Cyan100",
+            "startLine": 313,
+            "value": "0x84FFFF"
+          },
+          {
+            "name": "Cyan200",
+            "startLine": 314,
+            "value": "0x18FFFF"
+          },
+          {
+            "name": "Cyan400",
+            "startLine": 315,
+            "value": "0x00E5FF"
+          },
+          {
+            "name": "Cyan700",
+            "startLine": 316,
+            "value": "0x00B8D4"
+          },
+          {
+            "name": "Teal100",
+            "startLine": 317,
+            "value": "0xA7FFEB"
+          },
+          {
+            "name": "Teal200",
+            "startLine": 318,
+            "value": "0x64FFDA"
+          },
+          {
+            "name": "Teal400",
+            "startLine": 319,
+            "value": "0x1DE9B6"
+          },
+          {
+            "name": "Teal700",
+            "startLine": 320,
+            "value": "0x00BFA5"
+          },
+          {
+            "name": "Green100",
+            "startLine": 321,
+            "value": "0xB9F6CA"
+          },
+          {
+            "name": "Green200",
+            "startLine": 322,
+            "value": "0x69F0AE"
+          },
+          {
+            "name": "Green400",
+            "startLine": 323,
+            "value": "0x00E676"
+          },
+          {
+            "name": "Green700",
+            "startLine": 324,
+            "value": "0x00C853"
+          },
+          {
+            "name": "LightGreen100",
+            "startLine": 325,
+            "value": "0xCCFF90"
+          },
+          {
+            "name": "LightGreen200",
+            "startLine": 326,
+            "value": "0xB2FF59"
+          },
+          {
+            "name": "LightGreen400",
+            "startLine": 327,
+            "value": "0x76FF03"
+          },
+          {
+            "name": "LightGreen700",
+            "startLine": 328,
+            "value": "0x64DD17"
+          },
+          {
+            "name": "Lime100",
+            "startLine": 329,
+            "value": "0xF4FF81"
+          },
+          {
+            "name": "Lime200",
+            "startLine": 330,
+            "value": "0xEEFF41"
+          },
+          {
+            "name": "Lime400",
+            "startLine": 331,
+            "value": "0xC6FF00"
+          },
+          {
+            "name": "Lime700",
+            "startLine": 332,
+            "value": "0xAEEA00"
+          },
+          {
+            "name": "Yellow100",
+            "startLine": 333,
+            "value": "0xFFFF8D"
+          },
+          {
+            "name": "Yellow200",
+            "startLine": 334,
+            "value": "0xFFFF00"
+          },
+          {
+            "name": "Yellow400",
+            "startLine": 335,
+            "value": "0xFFEA00"
+          },
+          {
+            "name": "Yellow700",
+            "startLine": 336,
+            "value": "0xFFD600"
+          },
+          {
+            "name": "Amber100",
+            "startLine": 337,
+            "value": "0xFFE57F"
+          },
+          {
+            "name": "Amber200",
+            "startLine": 338,
+            "value": "0xFFD740"
+          },
+          {
+            "name": "Amber400",
+            "startLine": 339,
+            "value": "0xFFC400"
+          },
+          {
+            "name": "Amber700",
+            "startLine": 340,
+            "value": "0xFFAB00"
+          },
+          {
+            "name": "Orange100",
+            "startLine": 341,
+            "value": "0xFFD180"
+          },
+          {
+            "name": "Orange200",
+            "startLine": 342,
+            "value": "0xFFAB40"
+          },
+          {
+            "name": "Orange400",
+            "startLine": 343,
+            "value": "0xFF9100"
+          },
+          {
+            "name": "Orange700",
+            "startLine": 344,
+            "value": "0xFF6D00"
+          },
+          {
+            "name": "DeepOrange100",
+            "startLine": 345,
+            "value": "0xFF9E80"
+          },
+          {
+            "name": "DeepOrange200",
+            "startLine": 346,
+            "value": "0xFF6E40"
+          },
+          {
+            "name": "DeepOrange400",
+            "startLine": 347,
+            "value": "0xFF3D00"
+          },
+          {
+            "name": "DeepOrange700",
+            "startLine": 348,
+            "value": "0xDD2C00"
+          }
+        ]
+      }
+    ]
+  }
+]

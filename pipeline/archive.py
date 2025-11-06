@@ -92,7 +92,7 @@ def archive_processed_files(raw_dir: str = None,
                     os.remove(src_path)
                     
                 archived_items.append(item)
-                logger.info(f"Archived: {item} → {archive_subdir}")
+                logger.info(f"Archived: {item} -> {archive_subdir}")
                 
             except Exception as e:
                 logger.error(f"Failed to archive {item}: {e}")

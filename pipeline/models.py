@@ -9,8 +9,16 @@ load_dotenv()
 uri = os.getenv("NEO4J_BOLT_URL")
 user = os.getenv("NEO4J_USERNAME")
 pwd = os.getenv("NEO4J_PASSWORD")
-print(f"BOLT_URL = {uri}")
-config.DATABASE_URL = f"bolt://{user}:{pwd}@{uri.split('://')[1]}"
+
+# Handle both "bolt://host:port" and "host:port" formats
+if uri:
+    # Strip protocol if present
+    if "://" in uri:
+        uri = uri.split("://")[1]
+    print(f"BOLT_URL = {uri}")
+    config.DATABASE_URL = f"bolt://{user}:{pwd}@{uri}"
+else:
+    raise ValueError("NEO4J_BOLT_URL environment variable is not set")
 
 
 
@@ -42,7 +50,7 @@ class Project(StructuredNode):
     uid = UniqueIdProperty()
     name = StringProperty(required=True, unique_index=True)
     description = StringProperty()
-    created_at = DateTimeProperty(default_now=True)
+    created_at = StringProperty()  # Store as ISO format string to avoid timezone issues
     repository_url = StringProperty()
     tags = ArrayProperty(StringProperty())
 
@@ -56,7 +64,7 @@ class File(StructuredNode):
     file_type = StringProperty()  # .cs, .py, etc.
     lines_of_code = IntegerProperty()
     size_bytes = IntegerProperty()
-    last_modified = DateTimeProperty()
+    last_modified = StringProperty()  # Store as ISO format string to avoid timezone issues
     content_hash = StringProperty(index=True)
 
     module = RelationshipFrom("Module", "HAS_FILE")

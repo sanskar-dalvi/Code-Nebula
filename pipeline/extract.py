@@ -49,7 +49,7 @@ def extract_source(input_path: str = None, raw_dir: str = None) -> List[str]:
                     with zipfile.ZipFile(zpath, 'r') as zf:
                         zf.extractall(raw_dir)
             else:
-                # no zips found → copy all files/dirs as raw
+                # no zips found -> copy all files/dirs as raw
                 for name in os.listdir(input_path):
                     src = os.path.join(input_path, name)
                     dst = os.path.join(raw_dir, name)

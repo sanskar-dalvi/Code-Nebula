@@ -22,7 +22,7 @@ def test_root_endpoint():
     
     # Verify the structure and basic content of the response
     assert data["status"] == "healthy"
-    assert data["app"] == "C#→Neo4j AI Pipeline"
+    assert data["app"] == "C# -> Neo4j AI Pipeline"
     assert any(endpoint["path"] == "/api/process" for endpoint in data["endpoints"])
 
 

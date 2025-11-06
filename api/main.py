@@ -10,7 +10,7 @@ from api.routers.trigger_etl import router as etl_router
 
 # Create the FastAPI application with metadata
 app = FastAPI(
-    title="C#→Neo4j AI Pipeline",
+    title="C# -> Neo4j AI Pipeline",
     description="API for parsing C# code, enriching with AI, and storing in Neo4j",
     version="1.0.0"
 )
@@ -25,7 +25,7 @@ async def root():
     """Return basic API information and health status."""
     return {
         "status": "healthy",
-        "app": "C#→Neo4j AI Pipeline",
+        "app": "C# -> Neo4j AI Pipeline",
         "endpoints": [
             {"path": "/api/process", "method": "POST", "description": "Process C# files"},
             {"path": "/api/trigger-etl", "method": "POST", "description": "Trigger ETL pipeline for C# code"}

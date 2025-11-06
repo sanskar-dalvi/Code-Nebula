@@ -32,7 +32,7 @@ def main():
     """
     try:
         # Set up command line argument parsing
-        parser = argparse.ArgumentParser(description="Run full C# → Neo4j pipeline.")
+        parser = argparse.ArgumentParser(description="Run full C# -> Neo4j pipeline.")
         
         # Input path argument
         parser.add_argument(
@@ -93,9 +93,9 @@ def main():
                 logger.info("LLM logs available with: python logs/logger.py llm")
                 
                 if "enrich" in stats.get("phases_completed", []) and stats.get("files_processed", 0) > 0:
-                    logger.info("✅ Pipeline complete. Check Neo4j for results.")
+                    logger.info("[SUCCESS] Pipeline complete. Check Neo4j for results.")
                 else:
-                    logger.warning("⚠️ Pipeline completed but may not have processed all phases.")
+                    logger.warning("[WARNING] Pipeline completed but may not have processed all phases.")
                     
             except Exception as e:
                 logger.error(f"Batch ETL pipeline failed: {e}")
@@ -153,7 +153,7 @@ def main():
                 logger.info("Step 3: Ingesting to Neo4j")
                 try:
                     ingest_enriched_json(enriched_output_path)
-                    logger.info("✅ Pipeline complete. Check Neo4j for results.")
+                    logger.info("[SUCCESS] Pipeline complete. Check Neo4j for results.")
                 except Exception as e:
                     logger.error(f"Failed to ingest to Neo4j: {e}")
                     sys.exit(1)

@@ -76,7 +76,11 @@ def _process_single_file(file_path: Path):
     project_uid = f"Project:{project_name}"
     project_node = Project.nodes.get_or_none(uid=project_uid)
     if not project_node:
-        project_node = Project(uid=project_uid, name=project_name).save()
+        project_node = Project(
+            uid=project_uid, 
+            name=project_name,
+            created_at=datetime.now().isoformat()
+        ).save()
         logger.info(f"Created Project node: {project_name}")
 
     # --- Module node ---
@@ -102,7 +106,7 @@ def _process_single_file(file_path: Path):
                 name=file_path.name,
                 path=str(file_path),
                 file_type=file_path.suffix.lstrip("."),
-                last_modified=datetime.now(),
+                last_modified=datetime.now().isoformat(),
                 content_hash=data.get("file_hash", ""),
                 lines_of_code=data.get("loc", 0),
                 size_bytes=data.get("size", 0)
@@ -194,7 +198,7 @@ def _process_single_file(file_path: Path):
         except Exception as e:
             logger.error(f"Failed to process AST node {node.get('name')}: {e}")
 
-    logger.info(f"Created {new_nodes} new CodeEntity nodes and {new_links} file→entity connections")
+    logger.info(f"Created {new_nodes} new CodeEntity nodes and {new_links} file->entity connections")
 
     # Second Pass: Entity-to-entity CONTAINS relationships
     contains_count = 0
@@ -292,6 +296,6 @@ def _process_single_file(file_path: Path):
             continue
     logger.info(f"Created {impl_count} IMPLEMENTS relationships")
 
-    logger.info(f"✅ Completed ingestion: {file_name}")
+    logger.info(f"[SUCCESS] Completed ingestion: {file_name}")
 
         
